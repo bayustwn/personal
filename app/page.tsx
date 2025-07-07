@@ -22,7 +22,7 @@ export default function Home() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="absolute -z-98 bottom-0 scale-x-[-1]"
         >
-          <Image src="/me.png" alt="grid" width={500} height={500} />
+          <img src="/me.png" alt="me" width={500} height={500} />
         </motion.div>
         <div className="flex flex-col items-center mt-30">
           <motion.h1
@@ -66,7 +66,7 @@ export default function Home() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
           >
             <Button
-              icon="/phone-icon.svg"
+              icon="/project-icon.svg"
               style="flex-row-reverse"
               title="My Project"
             />
