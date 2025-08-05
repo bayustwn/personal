@@ -7,7 +7,7 @@ import { Button } from "./component/buttons";
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
-      <div className="no-scrollbar w-[60%] overflow-y-scroll">
+      <div className="no-scrollbar md:px-[20%] p-8 overflow-y-scroll">
         <div className="flex relative flex-col items-center h-screen px-4 sm:px-8">
           <motion.div
             initial={{ opacity: 0 }}
@@ -20,7 +20,7 @@ export default function Home() {
               alt="grid"
               width={800}
               height={800}
-              className="w-[90vw] max-w-[800px] h-auto"
+              className="w-[100vh] md:w-[90vw] max-w-[800px] h-auto"
             />
           </motion.div>
           <motion.div
@@ -35,7 +35,7 @@ export default function Home() {
               className="w-[100vw] max-w-[450px] sm:max-w-[500px] h-auto"
             />
           </motion.div>
-          <div className="flex flex-col items-center mt-24 sm:mt-30">
+          <div className="flex flex-col items-center mt-10">
             <motion.h1
               initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -53,7 +53,7 @@ export default function Home() {
               ~$ Fullstack Developer
             </motion.p>
           </div>
-          <div className="absolute flex-wrap bottom-6 sm:bottom-10 flex flex-col sm:flex-row gap-3 sm:gap-5 w-full items-center justify-center px-2">
+          <div className="absolute hidden md:flex flex-wrap bottom-6 sm:bottom-10 flex-col sm:flex-row gap-3 sm:gap-5 w-full items-center justify-center px-2">
             <motion.div
               initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -121,7 +121,7 @@ export default function Home() {
                   src={`/icons/${icon}`}
                   alt="react-icon"
                   width={icon == "/figma.svg" ? 25 : 30}
-                  className="transform hover:scale-110 transition-all"
+                  className="transform hover:scale-90 transition-all"
                 />
               );
             })}
@@ -154,9 +154,6 @@ export default function Home() {
             })}
           </div>
         </div>
-        <h3 className="font-bold mt-10 mb-10 text-4xl bg-gradient-to-b from-white to-gray bg-clip-text text-transparent leading-[1.1] pb-1">
-          Portofolio
-        </h3>
       </div>
     </main>
   );
