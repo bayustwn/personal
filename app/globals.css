@@ -1,12 +1,28 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
 @theme {
   --color-border: #383838;
+  --color-black-hover: #171717;
   --color-gray: #878787;
-  --color-black: #0A0A0A;
+  --color-black: #0a0a0a;
 }
 
 body {
-  background-color: #0A0A0A;
+  background-color: #0a0a0a;
   color: #ffffff;
 }
