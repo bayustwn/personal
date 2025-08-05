@@ -91,25 +91,72 @@ export default function Home() {
           </div>
         </div>
         <div className="h-screen mt-15">
-          <h3 className="font-bold text-4xl bg-gradient-to-b from-white to-gray bg-clip-text text-transparent leading-[1.1] pb-1">About Me</h3>
-          <p className="text-justify mt-3 text-lg/7 text-gray font-light"><span className="text-white">Hello i’m Bayu Setiawan</span>, a 6th-semester Computer Science student at Universitas Pembangunan Nasional "Veteran" Jawa Timur. Passionate about full-stack and <span className="text-white">Android development</span>, I actively engage in projects to enhance my skills. I participated in the Bangkit Academy Independent Study Program, where I gained valuable experience in Android development. Additionally, I joined the <span className="text-white">Mobile Development Community</span> at my university, where I contributed to various front-end and full-stack development projects while mentoring fellow students.</p>
+          <h3 className="font-bold text-4xl bg-gradient-to-b from-white to-gray bg-clip-text text-transparent leading-[1.1] pb-1">
+            About Me
+          </h3>
+          <p className="text-justify mt-3 text-lg/7 text-gray font-light">
+            <span className="text-white">Hello i’m Bayu Setiawan</span>, a
+            6th-semester Computer Science student at Universitas Pembangunan
+            Nasional "Veteran" Jawa Timur. Passionate about full-stack and{" "}
+            <span className="text-white">Android development</span>, I actively
+            engage in projects to enhance my skills. I participated in the
+            Bangkit Academy Independent Study Program, where I gained valuable
+            experience in Android development. Additionally, I joined the{" "}
+            <span className="text-white">Mobile Development Community</span> at
+            my university, where I contributed to various front-end and
+            full-stack development projects while mentoring fellow students.
+          </p>
           <h1 className="font-bold text-white text-lg mt-5">Skills</h1>
           <div className="flex flex-row mt-3 gap-4">
-            {Array.from(["/figma.svg","/react.svg","/android.svg","/js.svg","/kotlin.svg"]).map((icon,index)=>{
+            {Array.from([
+              "figma.svg",
+              "react.svg",
+              "android.svg",
+              "js.svg",
+              "kotlin.svg",
+            ]).map((icon, index) => {
               return (
-                <img key={index} src={`/icons/${icon}`} alt="react-icon" width={icon == "/figma.svg"? 20 : 30 } className="transform hover:scale-110 transition-all" />
-              )
+                <img
+                  key={index}
+                  src={`/icons/${icon}`}
+                  alt="react-icon"
+                  width={icon == "/figma.svg" ? 25 : 30}
+                  className="transform hover:scale-110 transition-all"
+                />
+              );
             })}
           </div>
           <h1 className="font-bold text-white text-xl mt-10">Certification</h1>
-          <div className="flex flex-row gap-5 mt-5">
-            {Array.from(["dca.jpg","fundamental.jpg",]).map((cert,index)=>{
-            return (
-              <img key={index} src={`/cert/${cert}`} alt="cert" className="w-70 h-fit rounded-lg hover:scale-110 transform transition-all cursor-pointer" />
-            )
-          })}
+          <div
+            className="flex flex-row gap-5 mt-5 pb-5 overflow-x-scroll [&::-webkit-scrollbar]:w-1
+          [&::-webkit-scrollbar]:h-2
+  [&::-webkit-scrollbar-track]:rounded-full
+  [&::-webkit-scrollbar-track]:bg-gray-100
+  [&::-webkit-scrollbar-thumb]:rounded-full
+  [&::-webkit-scrollbar-thumb]:bg-gray-300
+  dark:[&::-webkit-scrollbar-track]:bg-neutral-700/30
+  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500/40"
+          >
+            {Array.from([
+              "dca.jpg",
+              "fundamental.jpg",
+              "exprt.jpg",
+              "bangkit.jpg",
+            ]).map((cert, index) => {
+              return (
+                <img
+                  key={index}
+                  src={`/cert/${cert}`}
+                  alt="cert"
+                  className="w-70 h-fit rounded-lg hover:scale-95 transform transition-all cursor-pointer"
+                />
+              );
+            })}
           </div>
-       </div>
+        </div>
+        <h3 className="font-bold mt-10 mb-10 text-4xl bg-gradient-to-b from-white to-gray bg-clip-text text-transparent leading-[1.1] pb-1">
+          Portofolio
+        </h3>
       </div>
     </main>
   );
