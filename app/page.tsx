@@ -7,7 +7,7 @@ import { Button } from "./component/buttons";
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
-      <div className="no-scrollbar md:px-[20%] p-8 overflow-y-scroll">
+      <div className="no-scrollbar md:px-[20%] p-8 overflow-x-hidden overflow-y-scroll">
         <div className="flex relative flex-col items-center h-screen px-4 sm:px-8">
           <motion.div
             initial={{ opacity: 0 }}
